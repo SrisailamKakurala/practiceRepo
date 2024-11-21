@@ -1,0 +1,17 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+/* Pill Styling */
+.pill {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transform-origin: bottom;
+}
+
+/* Cursor Animation Canvas */
+#cursor-trail-canvas {
+  pointer-events: none;
+}

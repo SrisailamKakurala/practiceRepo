@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-GO Bus Story</title>
+  
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- GSAP and Lottie (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black overflow-hidden">
+
+  <!-- Curtain Section -->
+  <div id="curtain-container" class="fixed top-0 left-0 w-full h-full flex justify-center items-end z-20">
+    <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
+    <div class="pill pill-white w-[10vw] h-full bg-white"></div>
+    <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
+    <div class="pill pill-white w-[10vw] h-full bg-white"></div>
+    <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
+    <div class="pill pill-white w-[10vw] h-full bg-white"></div>
+    <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
+    <div class="pill pill-white w-[10vw] h-full bg-white"></div>
+    <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
+    <div class="pill pill-white w-[10vw] h-full bg-white"></div>
+  </div>
+
+  <!-- Lottie Animation Background -->
+  <div id="lottie-container" class="fixed inset-0 z-10 flex justify-center items-center">
+    <div id="lottie-animation" class="w-[150%] h-[150%]"></div>
+  </div>
+
+  <!-- Logo -->
+  <div id="logo-container" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 z-20">
+    <h1 id="logo" class="text-8xl font-extrabold text-white">e<span class="text-black">GO</span> Bus</h1>
+  </div>
+
+  <!-- Cursor Canvas -->
+  <canvas id="cursor-trail-canvas" class="absolute top-0 left-0 z-0"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
