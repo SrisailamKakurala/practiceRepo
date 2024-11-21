@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
   // Load Lottie Animation
   const lottieContainer = document.getElementById("lottie-animation");
   const lottieInstance = lottie.loadAnimation({
@@ -19,12 +22,33 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.1, // Stagger the animation for each pill
     ease: "power2.inOut",
   })
-  .to("#logo-container", {
-    opacity: 1, // Fade to 100% opacity
-    scale: 1.2, // Start with a slightly larger scale
-    duration: 3.2, // Duration of the animation
-    ease: "back.out(1.7)", // "Pop" effect easing
-  });
+    .to("#logo-container", {
+      opacity: 1, // Fade to 100% opacity
+      scale: 1.2, // Start with a slightly larger scale
+      duration: 3.2, // Duration of the animation
+      ease: "back.out(1.7)", // "Pop" effect easing
+    });
+
+  // GSAP ScrollTrigger for Page 2 Transition & Logo + Lottie Animation Shrink
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page2", // Trigger when page2 is in view
+      start: "top bottom", // Start when page2 reaches the bottom of the screen
+      end: "bottom top", // End when page2 is completely above the screen
+      scrub: true, // Smooth animation with scroll
+      pin: true, // Pin page2
+    }
+  })
+    .to("#logo-container", {
+      scale: 0, // Shrink logo
+      opacity: 0, // Fade out logo
+      duration: 1,
+    })
+    .to("#lottie-container", {
+      scale: 0.3, // Shrink Lottie animation
+      opacity: 0, // Fade out Lottie animation
+      duration: 1,
+    });
 
   // Set up Lottie animation and make the logo fade in as curtain goes up
   curtainTimeline.add(() => {
@@ -84,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   drawBalls();
 
   // Trigger ball creation on cursor move
-  let animationStarted = false;
+  let animationStarted = true;
   window.addEventListener("mousemove", (e) => {
     if (animationStarted) {
       createBall(e.clientX, e.clientY);

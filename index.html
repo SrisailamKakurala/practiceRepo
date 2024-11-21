@@ -7,11 +7,15 @@
   
   <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Locomotive Scroll (CDN) -->
+  <script src="https://unpkg.com/locomotive-scroll@4.0.0/dist/locomotive-scroll.min.js"></script>
   
   <!-- GSAP and Lottie (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
+
+
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -19,7 +23,7 @@
 <body class="bg-black overflow-y-scroll overflow-x-hidden">
 
   <!-- Curtain Section -->
-  <div id="curtain-container" class="absolute top-0 left-0 w-full h-full flex justify-center items-end z-20">
+  <div id="curtain-container" class="fixed top-0 left-0 w-full h-full flex justify-center items-end z-20">
     <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
     <div class="pill pill-white w-[10vw] h-full bg-white"></div>
     <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
