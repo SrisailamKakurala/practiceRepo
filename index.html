@@ -16,10 +16,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-black overflow-hidden">
+<body class="bg-black overflow-y-scroll overflow-x-hidden">
 
   <!-- Curtain Section -->
-  <div id="curtain-container" class="fixed top-0 left-0 w-full h-full flex justify-center items-end z-20">
+  <div id="curtain-container" class="absolute top-0 left-0 w-full h-full flex justify-center items-end z-20">
     <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
     <div class="pill pill-white w-[10vw] h-full bg-white"></div>
     <div class="pill pill-yellow w-[10vw] h-full bg-yellow-400"></div>
@@ -44,6 +44,11 @@
 
   <!-- Cursor Canvas -->
   <canvas id="cursor-trail-canvas" class="absolute top-0 left-0 z-0"></canvas>
+
+  <div class="bg-yellow-500 h-screen w-screen relative top-[100vh] rounded-t-[100px] flex items-center justify-center">
+    <h1 class="text-8xl font-extrabold text-black">Let the Journey Begin</h1>
+  </div>
+
 
   <script src="script.js"></script>
 </body>
