@@ -196,7 +196,9 @@ function withTimeout(promise, ms) {
 Let me know if you want a cheat sheet PDF version, or want to go into RxJS, Observables, or async patterns in Node.js too.
 
 
---- ADVANCE:
+--- 
+
+## ADVANCE:
 
 ```js
 const generateAllNotes = async () => {
